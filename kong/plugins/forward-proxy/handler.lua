@@ -9,7 +9,7 @@ end
 
 function plugin:access(plugin_conf)
     plugin.super.access(self)
-    ngx.var.upstream_host = ngx.ctx.service.host
+    ngx.var.upstream_host = string.format("%s:%s", ngx.ctx.service.host, ngx.ctx.service.port)
     ngx.ctx.balancer_address.host = plugin_conf.proxy_host
     ngx.ctx.balancer_address.port = plugin_conf.proxy_port
 end
