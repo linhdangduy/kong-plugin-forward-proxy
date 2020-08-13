@@ -2,7 +2,7 @@ package = "kong-plugin-forward-proxy"
 version = "0.1.0-0"
 
 source = {
-  url = "git+://github.com/davidcv5/kong-plugin-forward-proxy.git"
+  url = "git+https://github.com/linhdangduy/kong-plugin-forward-proxy.git"
 }
 
 description = {
