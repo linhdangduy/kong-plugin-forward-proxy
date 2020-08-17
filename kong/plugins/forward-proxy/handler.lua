@@ -14,7 +14,7 @@ function plugin:access(plugin_conf)
     ngx.log(ngx.NOTICE, string.format("before ngx.var.upstream_host: %s", ngx.var.upstream_host))
     ngx.log(ngx.NOTICE, string.format("before ngx.var.upstream_port: %s", ngx.var.upstream_port))
     ngx.var.upstream_host = ngx.ctx.service.host -- string.format("%s:%s", ngx.ctx.service.host, ngx.ctx.service.port)
-    ngx.var.target.port = string.format("%s:%s", ngx.ctx.service.host, ngx.ctx.service.port)
+    -- ngx.var.target.port = string.format("%s:%s", ngx.ctx.service.host, ngx.ctx.service.port)
     ngx.log(ngx.NOTICE, string.format("ngx.var.upstream_host %s", ngx.var.upstream_host))
     ngx.log(ngx.NOTICE, string.format("plugin_conf.proxy_host:plugin_conf.proxy_port %s:%s", plugin_conf.proxy_host, plugin_conf.proxy_port))
     ngx.ctx.balancer_data.scheme = "http"
